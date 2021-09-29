@@ -21,7 +21,6 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.dhruva.cart.Model.Cart;
 import com.dhruva.cart.Prevalent.CartViewHolder;
 import com.dhruva.cart.Prevalent.Prevalent;
-import com.dhruva.cart.R;
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -76,8 +75,10 @@ public class CartActivity extends AppCompatActivity{
             @Override
             protected void onBindViewHolder(@NonNull CartViewHolder holder, int position, @NonNull final Cart model) {
                 holder.txtProductQuantity.setText("Quantity = "+model.getQuantity());
-                holder.txtProductPrice.setText("Price = "+model.getPrice()+" Rs.");
+                holder.txtProductPrice.setText("Price = "+"Rs."+model.getPrice()+"");
                 holder.txtProductName.setText(model.getPname());
+                holder.txtProdctPerPrice.setText("Total Price = Rs." + ((Integer.valueOf(model.getPrice())))* Integer.valueOf(model.getQuantity()) );
+
                 int oneTyprProductTPrice = ((Integer.valueOf(model.getPrice())))* Integer.valueOf(model.getQuantity());
                 overTotalPrice = overTotalPrice + oneTyprProductTPrice;
 

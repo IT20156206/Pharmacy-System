@@ -7,4 +7,8 @@
     <color name="colorSecondaryVariant">#FF018786</color>
     <color name="colorOnSecondary">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="btn_color">#0DA89E</color>
+    <color name="input_bg">#282929</color>
+    <color name="input_lbt">#303D8D</color>
+
 </resources>

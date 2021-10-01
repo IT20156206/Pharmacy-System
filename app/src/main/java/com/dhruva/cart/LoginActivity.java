@@ -117,15 +117,15 @@ public class LoginActivity extends AppCompatActivity {
                     {
                         if (usersData.getPassword().equals(password))
                         {
-                            if(parentDbName.equals("Admins"))
-                            {
-                                Toast.makeText(LoginActivity.this, "Welcome Admin, you are logged in Successfully...", Toast.LENGTH_SHORT).show();
-                                loadingBar.dismiss();
-
-                                Intent intent = new Intent(LoginActivity.this, AdminCategoryActivity.class);
-                                startActivity(intent);
-                            }
-                            else if (parentDbName.equals("Users")){
+//                            if(parentDbName.equals("Admins"))
+//                            {
+//                                Toast.makeText(LoginActivity.this, "Welcome Admin, you are logged in Successfully...", Toast.LENGTH_SHORT).show();
+//                                loadingBar.dismiss();
+//
+//                                Intent intent = new Intent(LoginActivity.this, AdminCategoryActivity.class);
+//                                startActivity(intent);
+//                            }
+                            if (parentDbName.equals("Users")){
                                 Toast.makeText(LoginActivity.this, "logged in Successfully...", Toast.LENGTH_SHORT).show();
                                 loadingBar.dismiss();
 
